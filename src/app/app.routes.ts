@@ -1,3 +1,17 @@
 import { Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { SellerAuthComponent } from './seller-auth/seller-auth.component';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+export const routes: Routes = [
+    {
+        path: '',
+        component: HomeComponent
+    },
+    {
+        path: 'seller-auth',
+        component: SellerAuthComponent
+    }
+];
 
-export const routes: Routes = [];
+
