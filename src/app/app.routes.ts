@@ -3,6 +3,8 @@ import { HomeComponent } from './home/home.component';
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { SellerHomeComponent } from './seller-home/seller-home.component';
+
 export const routes: Routes = [
     {
         path: '',
@@ -11,6 +13,10 @@ export const routes: Routes = [
     {
         path: 'seller-auth',
         component: SellerAuthComponent
+    },
+    {
+        path: 'seller-home',
+        component: SellerHomeComponent
     }
 ];
 
