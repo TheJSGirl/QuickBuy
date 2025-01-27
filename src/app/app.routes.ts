@@ -6,6 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { AuthGuard } from './auth.guard';
 import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
+import { SellerProductListComponent } from './seller-product-list/seller-product-list.component';
 
 export const routes: Routes = [
     {
@@ -24,6 +25,11 @@ export const routes: Routes = [
     {
         path: 'seller-add-product',
         component: SellerAddProductComponent,
+        canActivate: [AuthGuard]
+    },
+    {
+        path: 'seller-product-list',
+        component: SellerProductListComponent,
         canActivate: [AuthGuard]
     }
 ];

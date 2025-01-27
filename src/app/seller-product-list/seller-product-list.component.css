@@ -1,0 +1,25 @@
+table {
+    text-align: left;
+    /* color: deepskyblue; */
+    border-collapse: collapse;
+}
+
+table th {
+    color: deepskyblue;
+
+}
+
+table td, table th {
+    padding: 10px;
+    min-height: 160px;
+    border: 1px solid black;
+}
+
+.del-btn {
+    font-size: 14px;
+}
+
+.sucess{
+    color: green;
+    text-align: center;
+}

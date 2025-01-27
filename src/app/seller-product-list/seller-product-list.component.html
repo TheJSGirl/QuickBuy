@@ -1,0 +1,40 @@
+<div class="product-list">
+    <h1>All Product List</h1>
+    <p class="sucess">{{deleteMsg}}</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Color</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Image Url</th>
+                <th>Action</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+          
+                @for (item of productList; track $index) {
+                    <tr > <td>{{item.name}}</td>
+                <td>{{item.price}}</td>
+                <td>{{item.color}}</td>
+                <td>{{item.category}}</td>
+                <td>{{item.description}}</td>
+                <td>{{item.image}}</td>
+                <td><button class="del-btn" (click)="handleProductDelete(item.id)">Delete</button></td>
+            </tr>
+
+                }
+           
+        </tbody>
+    </table>
+</div>
+
+
+<!-- If no products, show this message -->
+<ng-template #noProducts>
+    <p>No products found.</p>
+</ng-template>

@@ -12,7 +12,6 @@ export class ProductService {
   constructor(private http: HttpClient) { }
   
   addProduct(data: productType) {
-    console.log("hey-----")
     const headers = new HttpHeaders({'Content-Type': 'application/json'});
 
     this.http.post('http://localhost:3000/products',data, {observe: 'response', headers }).subscribe(
@@ -27,5 +26,15 @@ export class ProductService {
         console.error('Error adding product:', error);
       }
     );
+  }
+
+  showProductList() {
+    return this.http.get<productType[]>('http://localhost:3000/products');
+  }
+
+
+  deleteProduct(id: string) {
+    return this.http.delete(`http://localhost:3000/products/${id}`);
+
   }
 }
