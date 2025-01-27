@@ -29,3 +29,9 @@
     color: red;
     text-align: center;
 }
+
+.form-btn {
+    color: deepskyblue;
+    border-radius: 1px;
+    font-size: 14px;
+}

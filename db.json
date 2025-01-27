@@ -51,5 +51,61 @@
       "password": "123233222",
       "email": "priyanka@gmail.com"
     }
+  ],
+  "products": [
+    {
+      "id": "3580",
+      "name": "Samsung",
+      "price": "120",
+      "category": "mobile",
+      "description": "testing testing",
+      "color": "black",
+      "imageUrl": "https//:random/image"
+    },
+    {
+      "id": "3d74",
+      "name": "Samsung",
+      "price": "120",
+      "category": "mobile",
+      "description": "testing testing",
+      "color": "black",
+      "imageUrl": "https//:random/image"
+    },
+    {
+      "id": "07ad",
+      "name": "Samsung",
+      "price": "120",
+      "category": "mobile",
+      "description": "testing testing",
+      "color": "black",
+      "imageUrl": "https//:random/image"
+    },
+    {
+      "id": "00af",
+      "name": "dsdsdsddsdsdsf",
+      "price": "",
+      "color": "",
+      "category": "",
+      "description": "",
+      "image": ""
+    },
+    {
+      "id": "bac8",
+      "name": "dsdsdsddsdsdsf",
+      "price": "11",
+      "color": "red",
+      "category": "mobile",
+      "description": "sdds dfndfj. fdmbdf",
+      "image": "test url"
+    },
+    {
+      "id": "366f",
+      "name": "test",
+      "price": "motorola",
+      "color": "",
+      "category": "mobile",
+      "description": "",
+      "image": ""
+    }
   ]
 }
