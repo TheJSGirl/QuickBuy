@@ -4,7 +4,7 @@
     margin-top: 6rem;
 }
 .signup {
-    border: 1px solid blueviolet;
+    border: 1px solid deepskyblue;
     border-radius: 10px;
     width: 24rem;
     height: 30rem;
@@ -14,12 +14,12 @@
     text-align: center;
     margin-bottom: 50px;
     margin-top: 80px;
-    color: blueviolet;
+    color: deepskyblue;
 }
 
 .flipLink {
     margin-top: 20px;
-    color: blueviolet;
+    color: deepskyblue;
     font-size: 14px;
     text-align: left;
     cursor: pointer;

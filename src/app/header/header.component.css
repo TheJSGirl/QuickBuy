@@ -3,7 +3,7 @@
     justify-content: space-between;
 }
 .nav h1 {
-    color: blueviolet;
+    color: deepskyblue;
     margin: 0;
     font-size: 40px;
 }
@@ -22,7 +22,7 @@
 
 .nav  li a{
     text-decoration: none;
-    color: blueviolet;
+    color: deepskyblue;
 }
 
 .nav .nav-search{
@@ -36,16 +36,21 @@
 
 .nav .nav-search input {
     flex: 1;
-    color: blueviolet;
-    border: 1px solid blueviolet;
+    color: deepskyblue;
+    border: 1px solid deepskyblue;
     height: 35px;
     border-right: 0;
 }
 
 .nav .nav-search button {
-    color: blueviolet;
-    border: 1px solid blueviolet;
+    color: deepskyblue;
+    border: 1px solid deepskyblue;
     height: 39px;
     border-left: 0;
 }
 
+
+h1 a{
+    color: deepskyblue;
+    text-decoration: none;
+}
