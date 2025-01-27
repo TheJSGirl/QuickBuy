@@ -11,6 +11,7 @@ import { RouterLink , Router} from '@angular/router';
 })
 export class HeaderComponent {
   menuType: String = 'default';
+  sellerName: String = '';
 
   constructor(private route: Router){}
 
@@ -19,12 +20,21 @@ export class HeaderComponent {
       console.log(val.url)
       if(val.url) {
         if(localStorage.getItem('seller') && val.url.includes('seller')) {
-          this.menuType = 'seller'
+          this.menuType = 'seller';
+          if(localStorage.getItem('seller')) {
+            let sellerStore = localStorage.getItem('seller')
+            let sellerData = sellerStore && JSON.parse(sellerStore);
+            this.sellerName = sellerData[0].name;
+          }
         }else {
           this.menuType = 'default'
         }
       }
     })
 
+  }
+  logout() {
+    localStorage.removeItem('seller')
+    this.route.navigate(['/'])
   }
 }
