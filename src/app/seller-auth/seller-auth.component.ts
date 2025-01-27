@@ -14,15 +14,12 @@ export class SellerAuthComponent {
 
   }
 
+  ngOnInit():void {
+    this.seller.reloadSeller()
+  }
+
   signUp(data: SignUp):void {
-    this.seller.userSignUp(data).subscribe((result) => {
-      console.warn('User signed up:',result)
-      if(result) {
-        this.router.navigate(['seller-home'])
-      }
-
-    })
-
+    this.seller.userSignUp(data)
   }
 
 }
