@@ -3,6 +3,8 @@ import { ProductService } from '../services/product.service';
 import { productType } from '../data-type';
 import {  CommonModule, NgForOf } from '@angular/common';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-seller-product-list',
   imports: [CommonModule],
@@ -12,7 +14,9 @@ import { NO_ERRORS_SCHEMA } from '@angular/core';
 })
 export class SellerProductListComponent {
   productList: productType[] = []; 
-  deleteMsg = '' 
+  deleteMsg = '' ;
+  faCoffee= faCoffee ;
+
   constructor(private sellerProductList: ProductService){}
 
   ngOnInit():void {
