@@ -26,6 +26,7 @@
                 <td>{{item.image}}</td>
                 <td>
                     <button class="del-btn" (click)="handleProductDelete(item.id)">Delete </button>
+                    <button class="edit-btn" routerLink='/seller-update-product/{{item.id}}' >Edit </button>
                 </td>
             </tr>
 

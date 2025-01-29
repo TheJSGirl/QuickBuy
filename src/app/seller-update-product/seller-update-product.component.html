@@ -1,1 +1,22 @@
-<p>seller-update-product works!</p>
+<div class="add-product">
+    <h1>Update Product</h1>
+    <p class="sucess">{{updateMsg}}</p>
+    <form #updateProduct="ngForm" (ngSubmit)="submit(updateProduct.value)" class="common-form">
+        <input class="form-input" type="text" placeholder="Enter Product Name " ngModel="{{productData?.name}}" name="name"/>
+        <input class="form-input" type="text" placeholder="Enter Product Price " ngModel="{{productData?.price}}" name="price"/>
+        <input class="form-input" type="text" placeholder="Enter Product Color " ngModel="{{productData?.color}}" name="color"/>
+        <input class="form-input" type="text" placeholder="Enter Product Category " ngModel="{{productData?.category}}" name="category"/>
+        <textarea
+            type="text"
+            class="form-input"
+            placeholder="Enter Product Description"
+            name="description"
+            ngModel
+        >
+
+        </textarea>
+        <input type="text" ngModel class="form-input" name="image" placeholder="Enter Image Url"/>
+        <button class="form-btn">Update Product</button>
+    </form>
+
+</div>

@@ -4,10 +4,10 @@ import { productType } from '../data-type';
 import {  CommonModule, NgForOf } from '@angular/common';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
-
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-seller-product-list',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './seller-product-list.component.html',
   styleUrl: './seller-product-list.component.css',
   schemas: [NO_ERRORS_SCHEMA] 

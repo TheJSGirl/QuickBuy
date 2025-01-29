@@ -18,6 +18,10 @@ table td, table th {
 .del-btn {
     font-size: 14px;
 }
+.edit-btn {
+    font-size: 14px;
+    margin-left: 5px;
+}
 
 .sucess{
     color: green;
