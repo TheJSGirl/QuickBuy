@@ -13,21 +13,21 @@
     </ngb-carousel>
     <div class="product-list-wrapper">
         <h1>Trendy products</h1>
-        <div class="row">
-            <div class="col-sm-3">
+        <div class="row" >
+            <div class="col-sm-2" *ngFor="let item of trendyProducts">
                 <div class="product-item">
-                    <img src="https://m.media-amazon.com/images/I/61sU8OqBs4L._AC_UY436_FMwebp_QL65_.jpg" />
+                    <img src={{item.image}} />
 
                 <div class="product-details">
                     <h6 class="name-head">
-                        New Apple Mobile
+                        {{item.name}}
                     </h6>
 
                         <div class="product-price">
                             <h6>Price: 10000</h6>
                         </div>
                         <div class="product-color">
-                            <h6>Color: red</h6>
+                            <h6>Color: {{item.color}}</h6>
                         </div>
                 </div>
                 <div class="product-footer">

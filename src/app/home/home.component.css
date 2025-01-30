@@ -2,23 +2,29 @@
     object-fit: contain;
     height: 600px;
     width: 100%;
+
 }
 
 .product-item  img{
-    width: 200px;
+    width: 150px;
     height: 300px;
     object-fit: contain;
+
+    
 }
 
 .product-list-wrapper {
     margin-top: 80px;
     margin-bottom: 80px;
     margin-left: 25px;
+    margin-right: 25px;
 }
 
 .product-item {
     border: 1px solid #ddd;
     margin-bottom: 40px;
+    text-align: center;
+    
 
 }
 
@@ -41,4 +47,10 @@
 .product-item .name-head{
     font-size: 20px;
     font-weight: 600;
+    margin: 0;
+    text-align: center;
+}
+
+.product-item .product-details h6 {
+    text-align: center;
 }

@@ -50,4 +50,9 @@ export class ProductService {
   getDemandedProducts(){
     return this.http.get<productType[]>('http://localhost:3000/products?_limit=3');
   }
+
+  trendyProducts() {
+    return this.http.get<productType[]>('http://localhost:3000/products?_limit=8');
+
+  }
 }
