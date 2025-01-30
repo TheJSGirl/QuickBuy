@@ -46,4 +46,8 @@ export class ProductService {
   updateProduct( productData: productType ) {
     return this.http.put<productType>(`http://localhost:3000/products/${productData.id}`, productData);
   }
+
+  getDemandedProducts(){
+    return this.http.get<productType[]>('http://localhost:3000/products?_limit=3');
+  }
 }

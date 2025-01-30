@@ -55,29 +55,29 @@
   "products": [
     {
       "id": "00af",
-      "name": "dsdsdsddsdsdsf",
-      "price": "",
-      "color": "",
-      "category": "",
-      "description": "",
-      "image": ""
+      "name": "Notepad",
+      "price": "123",
+      "color": "white",
+      "category": "tab",
+      "description": "This is a LG product",
+      "image": "https://m.media-amazon.com/images/I/718HzJbvY1L._AC_UY436_FMwebp_QL65_.jpg"
     },
     {
-      "name": "dsdsdsddsdsdsf",
+      "name": "Samsung",
       "price": "11",
       "color": "red",
       "category": "mobile",
-      "description": "testing",
-      "image": "",
+      "description": "This is a Samsung product",
+      "image": "https://m.media-amazon.com/images/I/61sU8OqBs4L._AC_UY436_FMwebp_QL65_.jpg",
       "id": "bac8"
     },
     {
-      "name": "testing",
+      "name": "Moto z25",
       "price": "motorola",
       "color": "",
       "category": "mobile",
       "description": "testing",
-      "image": "",
+      "image": "https://m.media-amazon.com/images/I/81dl4dQY3BL._AC_UY436_FMwebp_QL65_.jpg",
       "id": "366f"
     }
   ]

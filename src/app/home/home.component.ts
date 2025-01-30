@@ -1,11 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { ProductService } from '../services/product.service';
+import { productType } from '../data-type';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [NgbCarouselModule, CommonModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomeComponent {
+  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  popularProducts: undefined | productType[];
 
+  constructor(private products: ProductService){}
+  ngOnInit(): void {
+    this.products.getDemandedProducts().subscribe((data) => {
+      if(data){
+        this.popularProducts= data
+      }
+    })
+  }
 }
