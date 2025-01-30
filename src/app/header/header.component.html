@@ -1,8 +1,10 @@
 <nav class="nav">
    <h1><a routerLink="/">QuickBuy</a></h1>
     <div *ngIf="menuType==='default' " class="nav-search">
-        <input type="text" placeholder="Search for Products" (keyup)="searchProducts($event)" (blur)="hideSearch()" />
-        <button>Search</button>
+        <input type="text"
+            #searchInput 
+            placeholder="Search for Products" (keyup)="searchProducts($event)" (blur)="hideSearch()" />
+        <button (click)="submitSearch(searchInput.value)">Search</button>
         <ul class="searchRes" *ngIf="searchRes">
             <li *ngFor="let item of searchRes" >
                 <a>{{item.name}}</a>
