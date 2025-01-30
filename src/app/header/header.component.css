@@ -32,6 +32,8 @@
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 5px;
+
+    /* flex-direction: column; */
 }
 
 .nav .nav-search input {
@@ -49,8 +51,32 @@
     border-left: 0;
 }
 
+.nav .nav-search .search {
+    flex: 1;
+    display: flex;
+}
 
 h1 a{
     color: deepskyblue;
     text-decoration: none;
+}
+
+.nav .nav-search .searchRes {
+    display: list-item;
+    position: absolute;
+    z-index: 10;
+    width: 300px;
+    top: 40px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.nav .nav-search .searchRes li {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+.searchRes li a {
+    cursor: pointer;
+    color: deepskyblue;
 }

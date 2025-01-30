@@ -1,10 +1,12 @@
-import { NgIf, NgSwitch, NgSwitchCase } from '@angular/common';
+import { CommonModule, NgIf, NgSwitch, NgSwitchCase } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { RouterLink , Router} from '@angular/router';
+import { ProductService } from '../services/product.service';
+import { productType } from '../data-type';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink, NgIf, NgSwitch, NgSwitchCase],
+  imports: [RouterLink, NgIf, NgSwitch, NgSwitchCase, CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
   standalone: true
@@ -12,8 +14,9 @@ import { RouterLink , Router} from '@angular/router';
 export class HeaderComponent {
   menuType: String = 'default';
   sellerName: String = '';
+  searchRes : undefined | productType[];
 
-  constructor(private route: Router){}
+  constructor(private route: Router, private products : ProductService){}
 
   ngOnInit() : void{
     this.route.events.subscribe((val: any) => {
@@ -36,5 +39,21 @@ export class HeaderComponent {
   logout() {
     localStorage.removeItem('seller')
     this.route.navigate(['/'])
+  }
+
+  searchProducts(query:KeyboardEvent) {
+    if(query) {
+      const element = query?.target as HTMLInputElement;
+      this.products.searchProducts(element.value).subscribe((result) => {
+        if(result.length > 5) {
+          result.length = 5;
+        }
+        this.searchRes = result;
+      })
+    }
+  }
+
+  hideSearch() {
+    this.searchRes = undefined
   }
 }
