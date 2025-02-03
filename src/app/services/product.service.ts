@@ -16,7 +16,6 @@ export class ProductService {
 
     this.http.post('http://localhost:3000/products',data, {observe: 'response', headers }).subscribe(
       (response) => {
-        console.log('Product added successfully:', response);
         if(response) {
           this.productMsg.emit(true);
         }

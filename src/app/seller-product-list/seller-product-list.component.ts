@@ -27,9 +27,7 @@ export class SellerProductListComponent {
   }
 
   handleProductDelete(id: string) {
-    console.log(id)
     this.sellerProductList.deleteProduct(id).subscribe((res) => {
-      console.log(res)
       if(res) {
         this.deleteMsg = 'Product is deleted'
       }

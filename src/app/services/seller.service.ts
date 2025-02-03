@@ -38,15 +38,11 @@ export class SellerService {
     }
 
     userLogin(data: Login) {
-      console.warn("data---", data)
       this.http.get(`http://localhost:3000/seller?email=${data.email}&password=${data.password}`, {observe: 'response'}).subscribe((result: any) => {
-        console.log(result)
         if(result && result.body && result.body.length) {
-          console.log("user loggedin")
           localStorage.setItem('seller', JSON.stringify(result.body))
           this.router.navigate(['seller-home'])
         }else {
-          console.log("failed")
           this.isLoginError.emit(true)
         }
       })

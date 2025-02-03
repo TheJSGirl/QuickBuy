@@ -9,6 +9,7 @@ import { SellerAddProductComponent } from './seller-add-product/seller-add-produ
 import { SellerProductListComponent } from './seller-product-list/seller-product-list.component';
 import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
 import { SearchComponent } from './search/search.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 export const routes: Routes = [
     {
@@ -42,7 +43,12 @@ export const routes: Routes = [
     {
         path: 'search/:query',
         component: SearchComponent,
+    },
+    {
+        path: 'details/:id',
+        component: ProductDetailsComponent,
     }
 ];
+
 
 
