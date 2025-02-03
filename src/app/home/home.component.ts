@@ -4,10 +4,11 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductService } from '../services/product.service';
 import { productType } from '../data-type';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [NgbCarouselModule, CommonModule],
+  imports: [NgbCarouselModule, CommonModule, RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
