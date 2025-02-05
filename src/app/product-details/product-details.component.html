@@ -1,17 +1,17 @@
 <div class="row product-details" *ngIf="productDetail">
     <div class="col-sm-6">
-        <img src="{{productDetail?.image}}" />
+        <img src="{{productDetail.image}}" />
     </div>
     <div class="col-sm-6">
         <div class="details">
-            <h1>{{productDetail?.name}}</h1>
-            <h3>{{productDetail?.price}}</h3>
+            <h1>{{productDetail.name}}</h1>
+            <h3>{{productDetail.price}}</h3>
             <div>
                 Color: 
                 <h5 [style.backgroundColor]="productDetail.color" class="product-color"></h5>
             </div>
-            <h6>Category : {{productDetail?.category}}</h6>
-            <h6>Description : {{productDetail?.description}}</h6>
+            <h6>Category : {{productDetail.category}}</h6>
+            <h6>Description : {{productDetail.description}}</h6>
             <button class="form-btn">Add to Cart</button>
             <button class="form-btn">Buy Now</button>
             <div class="quantity-group">

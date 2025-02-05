@@ -61,7 +61,7 @@ export class HeaderComponent {
     this.route.navigate([`search/${val}`]);
   }
 
-  redirectToDetails(id: number) {
+  redirectToDetails(id: string) {
     this.route.navigate([`/details/${id}`])
   }
 }
